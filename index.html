@@ -5,84 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falafel fir d'Kim</title>
     <style>
-        :root { --primary: #6b705c; --accent: #a98467; --bg: #fefae0; --dark-red: #8b0000; }
-        body { font-family: 'Georgia', serif; background-color: var(--bg); color: #333; margin: 0; padding: 0; display: flex; justify-content: center; }
-        .wrapper { max-width: 600px; width: 100%; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        :root { 
+            --primary: #6b705c; 
+            --accent: #a98467; 
+            --bg: #fefae0; 
+            --dark-red: #8b0000;
+        }
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: var(--bg); 
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+        }
+        .wrapper { 
+            max-width: 600px; 
+            width: 100%; 
+            background: white; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.05); 
+        }
         .content { padding: 25px; }
         h1, h2 { color: var(--primary); text-align: center; }
-        .heart { text-align: center; font-size: 3.5rem; color: var(--dark-red); cursor: pointer; margin: 20px 0; -webkit-tap-highlight-color: transparent; }
-        .swabian { border-bottom: 2px dotted var(--accent); cursor: pointer; font-weight: bold; color: var(--primary); -webkit-tap-highlight-color: transparent; }
-        .step img { width: 100%; border-radius: 12px; margin: 15px 0; display: block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .ingredients { background: #faedcd; padding: 20px; border-radius: 15px; margin-bottom: 30px; }
-        .sofa-moment { background: #e9edc9; padding: 20px; border-radius: 15px; margin-top: 40px; text-align: center; font-style: italic; border: 1px dashed var(--primary); }
-        footer { text-align: center; padding: 40px; font-style: italic; background: var(--bg); color: var(--primary); }
-        #t-modal { display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 12px 20px; border-radius: 25px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        
+        .heart { 
+            text-align: center; 
+            font-size: 3.5rem; 
+            color: var(--dark-red); 
+            cursor: pointer; 
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 0 5px rgba(139, 0, 0, 0.2));
+            -webkit-tap-highlight-color: transparent;
+        }
+        .heart:active { transform: scale(1.3) rotate(5deg); }
+
+        .swabian { 
+            border-bottom: 2px dotted var(--accent); 
+            cursor: help; 
+            font-weight: bold; 
+            color: var(--primary);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .step img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 15px 0; 
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .ingredients { 
+            background: #faedcd; 
+            padding: 20px; 
+            border-radius: 15px; 
+            margin-bottom: 30px; 
+        }
+
+        .sofa-moment {
+            background: #e9edc9;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+            border: 1px dashed var(--primary);
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            font-style: italic; 
+            background: var(--bg);
+            color: var(--primary);
+        }
     </style>
 </head>
 <body>
-<div id="t-modal"></div>
+
 <div class="wrapper">
-    <header><img src="0_rezept_header.png" style="width:100%;"></header>
+    <header>
+        <img src="0_rezept_header.png" style="width:100%; display: block;" alt="Leckere Falafel">
+    </header>
+
     <div class="content">
-        <div class="heart">❤</div>
-        <h1>Fir mei Kimle ❤</h1>
-        <p style="text-align: center;">Wie du dir des <span class="swabian" data-trans="gewünscht hast">gwenscht hasch</span>, <span class="swabian" data-trans="habe">han</span> I dir des Falafelrezept <span class="swabian" data-trans="aufgeschrieben">aufgschriebe</span>. I <span class="swabian" data-trans="habe">han</span> mir denkt, es <span class="swabian" data-trans="ist">isch</span> ganz guat, wenn a <span class="swabian" data-trans="bisschen">bissle</span> Schwäbisch lesa <span class="swabian" data-trans="lernst">lernsch</span> ond dabei direkt was <span class="swabian" data-trans="Richtiges">Räachts</span> zom Essa <span class="swabian" data-trans="kochst">kochsch</span>!</p>
+        <div class="heart" title="Druck mi fir d'Magie!">❤️</div>
+        <h1>Fir mei Kimle ❤️</h1>
+        
+        <p style="text-align: center; line-height: 1.6;">
+            Wie du dir des gewünscht hasch, hab i dir des Falafelrezept aufgschrieba.
+            I han mir denkt, es isch ganz guat, wenn a bissle Schwäbisch lesa lernsch ond dabei direkt was 
+            <span class="swabian" title="Ordentliches / Richtiges">Räachts</span> zom Essa kochscht!
+        </p>
+
         <div class="ingredients">
             <h2>Was de brauchsch</h2>
             <ul>
-                <li><strong>500g</strong> <span class="swabian" data-trans="getrocknete">droggene</span> Kichererbsen</li>
-                <li>Zwiebel ond an <span class="swabian" data-trans="Haufen">Haufa</span> Knoblauch</li>
-                <li>Salzwasser zom <span class="swabian" data-trans="Einweichen">Eilega</span></li>
-                <li><span class="swabian" data-trans="hundert">ois-null-null</span>g Mehl & a Pris Natron</li>
-                <li>Frischs <span class="swabian" data-trans="Grünzeug">Greaszeig</span> aus <span class="swabian" data-trans="deinem">dei'm</span> Gärtle</li>
-                <li>Viel <span class="swabian" data-trans="Öl">Eel</span> fir d'Pfann</li>
+                <li><strong>500g</strong> <span class="swabian" title="getrocknete">droggene</span> Kichererbsen (bloß koi Dose!)</li>
+                <li>Zwiebel ond an <span class="swabian" title="eine Menge">Haufa</span> Knoblauch</li>
+                <li>Salzwasser zom <span class="swabian" title="Einlegen">Eilega</span></li>
+                <li><strong>100g</strong> Mehl (weiß) & a <strong>Prise</strong> Natron</li>
+                <li>Frischs Grünzeig aus dei'm Gärtle in Anholt</li>
             </ul>
         </div>
+
         <div class="step">
-            <h2><span class="swabian" data-trans="eins">Ois</span>. S' Bad</h2>
-            <p>Lass dir Zeit! D'Kichererbsen müsset <span class="swabian" data-trans="getrocknete">sei</span> ond dann für <span class="swabian" data-trans="zwölf">zwolf</span> bis <span class="swabian" data-trans="vierundzwanzig">vierazwanzig</span> Stond <span class="swabian" data-trans="einweichen">eilega</span>.</p>
+            <h2>1. Des Bad</h2>
+            <p>De <span class="swabian" title="getrockneten">droggene</span> Kichererbsen müsset woich sei ond dann für zwölf bis vierazwanzig Stond <span class="swabian" title="einlegen">eilega</span>.</p>
             <img src="1_falafel_soaking.jpeg">
         </div>
+
         <div class="step">
-            <h2><span class="swabian" data-trans="zwei">Zwoi</span>. Des G'schäft</h2>
-            <p>Ab in de Mixer! Damit's <span class="swabian" data-trans="schön">schee</span> feucht <span class="swabian" data-trans="ist">isch</span> ond flutscht. Lass es ruhig <span class="swabian" data-trans="zweimal">zwoimol</span> oder <span class="swabian" data-trans="dreimal">dreimol</span> durchlaufe. Guck a mol unde, was die Maia ond I fir a Sauerei g'macht <span class="swabian" data-trans="haben">henn</span>, also <span class="swabian" data-trans="aufpassen">ufbassa</span>, des lauft schnell <span class="swabian" data-trans="aus dem">ausm</span> Ruder.</p>
-            <img src="2_genug_wasser.png"><img src="3_falafel_schweinerei.jpeg">
+            <h2>2. Des <span class="swabian" title="Vorgang">G'schäft</span></h2>
+            <p>Ab in de Mixer mit viel Wasser! Lass es ruhig in zwoi oder drei Portionen durchlaufe, damits no <span class="swabian" title="Stückchen (machen es knusprig)">Breggel</span> hat, aber au geschmeidig isch. Es muss richtig <span class="swabian" title="rutschen">flutschen</span>!</p>
+            <img src="2_genug_wasser.png">
+            <img src="3_falafel_schweinerei.jpeg">
         </div>
+
         <div class="step">
-            <h2><span class="swabian" data-trans="drei">Drei</span>. Droggelege</h2>
-            <p>Jetzt kommt <span class="swabian" data-trans="das Wasser">s'Wasser</span> wieder raus! Pack d'Masse in a Tuch ond dann: <span class="swabian" data-trans="drücke, drücke, drücke">drugge, drugge, drugge!</span> Damit d'Masse <span class="swabian" data-trans="schön trocken wird">schee drogge wird</span>.</p>
+            <h2>3. Trockalega</h2>
+            <p>Jetzt kommt des Wasser wieder raus! Pack d'Masse in a Tuch ond dann: <span class="swabian" title="drücke, drücke, drücke">drucke, drucke, drucke!</span> Des Wasser muss ganz raus, damit d'Masse schee trocke wird.</p>
             <img src="4_wasser_raus.png">
         </div>
+
         <div class="step">
-            <h2><span class="swabian" data-trans="vier">Vier</span>. Wuerze & Forme</h2>
-            <p>Mehl ond Natron dazu. Ond dann: Lass es <span class="swabian" data-trans="einmal erst">oimol erscht</span> steha! Dann wird d'Masse <span class="swabian" data-trans="schön">schee</span> fescht.</p>
-            <img src="5_falafel_teig.jpeg"><img src="6_falafel_baellchen.jpeg">
+            <h2>4. Würza & Forma</h2>
+            <p>Mehl und Natron oder Backpulver dazu, und deine Lieblingsgewürze, Pfeffer, Muskat, <span class="swabian" title="was du willst">wa de wid</span>. Ond dann: <strong>Lass es steha!</strong> Wenn d'Masse ruht, wird se schee fescht.</p>
+            <img src="5_falafel_teig.jpeg">
+            <img src="6_falafel_baellchen.jpeg">
         </div>
+
         <div class="step">
-            <h2><span class="swabian" data-trans="fünf">Feif</span>. Pfann</h2>
-            <p>Holsch aus <span class="swabian" data-trans="deinem">dei'm</span> Gärtle <span class="swabian" data-trans="schönes Grünzeug">schees Greaszeig</span>. <span class="swabian" data-trans="brate">Bretsch</span> se in <span class="swabian" data-trans="Öl">Eel</span> goldgelb an. I bin g'spannt, ob es euch alle schmeckt!</p>
+            <h2>5. Ab in d'Pfann</h2>
+            <p>Holsch aus dei'm Gärtle noch was schönes Grünzeig dazu! Form dei Bällle ond <span class="swabian" title="brate">bretsch</span> se goldgelb an von beida Seita. Die kannsch direkt essa oder später nochmal aufbacka – schmecket emmer guat!</p>
             <img src="7_braten.jpeg">
         </div>
+
         <div class="sofa-moment">
-            Am beschte schmecket d'Falafel gemeinsam auf'm Sofa. Wenn i des aufschreib, denk i dra, wie mir beide dahoim <span class="swabian" data-trans="gesessen">ghockt</span> <span class="swabian" data-trans="sind">send</span>. Des war so <span class="swabian" data-trans="schön">schee</span>!
+            ✨ <strong>Unser Moment:</strong> ✨<br>
+            Am beschte schmecket d'Falafel gemeinsam auf'm Sofa so wie bei ons boide. Wenn i des aufschreib, denk i dra, wie mir beide dahoim aufm Sofa gegesse hend. Des war so schee!
         </div>
     </div>
-    <footer>G'macht mit Liebe von Michael.<br>Lass es dir schmecke, Schpaetzle!</footer>
+
+    <footer>
+        G'macht mit Liebe von Michael.<br>
+        Lass es Dir schmecka, Schätzle!
+    </footer>
 </div>
+
 <script>
     document.querySelector('.heart').addEventListener('click', function() {
-        alert("💫 ✨ 🌠\n\nDu bisch mei aller scheeschter Schatz!\n\nIn meim Herzle hasch de einzigartigen Platz.\nVom Magen direkt in dei Herzle nei,\nso soll mei Falafel-Liebe fir di sei!\n\n💫 ✨ 🌠");
+        alert("Du bisch mein aller schönster Schatz!\n\nIn meim Herzle hasch de einzigartigen Platz.\nVom Magen direkt in dei Herzle nei,\nso soll mei Falafel-Liebe fir di sei!\n\n❤️ 💫 ✨ 🌠");
     });
-    const modal = document.getElementById('t-modal');
-    document.querySelectorAll('.swabian').forEach(el => {
-        el.addEventListener('click', function(e) {
-            e.stopPropagation();
-            modal.innerText = this.getAttribute('data-trans');
-            modal.style.display = 'block';
-            setTimeout(() => { modal.style.display = 'none'; }, 2500);
-        });
-    });
-    document.addEventListener('click', () => { modal.style.display = 'none'; });
 </script>
+
 </body>
 </html>
