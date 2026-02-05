@@ -43,7 +43,7 @@
 
         .swabian { 
             border-bottom: 2px dotted var(--accent); 
-            cursor: help; 
+            cursor: pointer; 
             font-weight: bold; 
             color: var(--primary);
             -webkit-tap-highlight-color: transparent;
@@ -91,21 +91,21 @@
     </header>
 
     <div class="content">
-        <div class="heart" title="Druck mi fir d'Magie!">❤️</div>
+        <div class="heart">❤️</div>
         <h1>Fir mei Kimle</h1>
         
         <p style="text-align: center; line-height: 1.6;">
             Wie du dir des gewünscht hasch, hab i dir des Falafelrezept aufgschrieba.
             I han mir denkt, es isch ganz guat, wenn a bissle Schwäbisch lesa lernsch ond dabei direkt was 
-            <span class="swabian" title="Ordentliches / Richtiges">Räachts</span> zom Essa kochscht!
+            <span class="swabian" data-tr="Ordentliches / Richtiges">Räachts</span> zom Essa kochscht!
         </p>
 
         <div class="ingredients">
             <h2>Was de brauchsch</h2>
             <ul>
-                <li><strong>500g</strong> <span class="swabian" title="getrocknete">droggene</span> Kichererbsen (bloß koi Dose!)</li>
-                <li>Zwiebel ond an <span class="swabian" title="eine Menge">Haufa</span> Knoblauch</li>
-                <li>Salzwasser zom <span class="swabian" title="Einlegen">Eilega</span></li>
+                <li><strong>500g</strong> <span class="swabian" data-tr="getrocknete">droggene</span> Kichererbsen (bloß koi Dose!)</li>
+                <li>Zwiebel ond an <span class="swabian" data-tr="eine Menge">Haufa</span> Knoblauch</li>
+                <li>Salzwasser zom <span class="swabian" data-tr="Einlegen">Eilega</span></li>
                 <li><strong>100g</strong> Mehl (weiß) & a <strong>Prise</strong> Natron</li>
                 <li>Frischs Grünzeig aus dei'm Gärtle in Anholt</li>
             </ul>
@@ -113,33 +113,33 @@
 
         <div class="step">
             <h2>1. Des Bad</h2>
-            <p>De <span class="swabian" title="getrockneten">droggene</span> Kichererbsen müsset woich sei ond dann für zwölf bis vierazwanzig Stond <span class="swabian" title="einlegen">eilega</span>.</p>
+            <p>De <span class="swabian" data-tr="getrockneten">droggene</span> Kichererbsen müsset woich sei ond dann für zwölf bis vierazwanzig Stond <span class="swabian" data-tr="einlegen">eilega</span>.</p>
             <img src="1_falafel_soaking.jpeg">
         </div>
 
         <div class="step">
-            <h2>2. Des <span class="swabian" title="Vorgang">G'schäft</span></h2>
-            <p>Ab in de Mixer mit viel Wasser! Lass es ruhig in zwoi oder drei Portionen durchlaufe, damits no <span class="swabian" title="Stückchen (machen es knusprig)">Breggel</span> hat, aber au geschmeidig isch. Es muss richtig <span class="swabian" title="rutschen">flutschen</span>!</p>
+            <h2>2. Des G'schäft</h2>
+            <p>Ab in de Mixer mit viel Wasser! Lass es ruhig in zwoi oder drei Portionen durchlaufe, damits no <span class="swabian" data-tr="Stückchen (machen es knusprig)">Breggel</span> hat, aber au geschmeidig isch. Es muss richtig <span class="swabian" data-tr="rutschen">flutschen</span>!</p>
             <img src="2_genug_wasser.png">
             <img src="3_falafel_schweinerei.jpeg">
         </div>
 
         <div class="step">
             <h2>3. Trockalega</h2>
-            <p>Jetzt kommt des Wasser wieder raus! Pack d'Masse in a Tuch ond dann: <span class="swabian" title="drücke, drücke, drücke">drucke, drucke, drucke!</span> Des Wasser muss ganz raus, damit d'Masse schee trocke wird.</p>
+            <p>Jetzt kommt des Wasser wieder raus! Pack d'Masse in a Tuch ond dann: <span class="swabian" data-tr="drücke, drücke, drücke">drucke, drucke, drucke!</span> Des Wasser muss ganz raus, damit d'Masse schee trocke wird.</p>
             <img src="4_wasser_raus.png">
         </div>
 
         <div class="step">
             <h2>4. Würza & Forma</h2>
-            <p>Mehl und Natron oder Backpulver dazu, und deine Lieblingsgewürze, Pfeffer, Muskat, <span class="swabian" title="was du willst">wa de wid</span>. Ond dann: <strong>Lass es steha!</strong> Wenn d'Masse ruht, wird se schee fescht.</p>
+            <p>Mehl und Natron oder Backpulver dazu, und deine Lieblingsgewürze, Pfeffer, Muskat, <span class="swabian" data-tr="was du willst">wa de wid</span>. Ond dann: <strong>Lass es steha!</strong> Wenn d'Masse ruht, wird se schee fescht.</p>
             <img src="5_falafel_teig.jpeg">
             <img src="6_falafel_baellchen.jpeg">
         </div>
 
         <div class="step">
             <h2>5. Ab in d'Pfann</h2>
-            <p>Holsch aus dei'm Gärtle noch was schönes Grünzeig dazu! Form dei Bällle ond <span class="swabian" title="brate">bretsch</span> se goldgelb an von beida Seita. Die kannsch direkt essa oder später nochmal aufbacka – schmecket emmer guat!</p>
+            <p>Holsch aus dei'm Gärtle noch was schönes Grünzeig dazu! Form dei Bällle ond <span class="swabian" data-tr="brate">bretsch</span> se goldgelb an von beida Seita. Die kannsch direkt essa oder später nochmal aufbacka – schmecket emmer guat!</p>
             <img src="7_braten.jpeg">
         </div>
 
@@ -151,13 +151,22 @@
 
     <footer>
         G'macht mit Liebe von Michael.<br>
-        Lass es Dir schmecka, Schätzle!
+        Lass es Dir schmecka, Schpätzle!
     </footer>
 </div>
 
 <script>
+    // Geheime Botschaft
     document.querySelector('.heart').addEventListener('click', function() {
-        alert("Du bisch mein aller schönster Schatz!\n\nIn meim Herzle hasch du en einzigartige Platz.\nVom Magen direkt in dei Herzle nei,\nso soll mei Falafel-Liebe fir di sei!\n\n❤️✨");
+        alert("Du bisch mein aller schönster Schatz!\n\nIn meim Herzle hasch de einzigartigen Platz.\nVom Magen direkt in dei Herzle nei,\nso soll mei Falafel-Liebe fir di sei!\n\n❤️ 💫 ✨ 🌠");
+    });
+
+    // Übersetzungen
+    document.querySelectorAll('.swabian').forEach(function(el) {
+        el.addEventListener('click', function() {
+            var translation = this.getAttribute('data-tr');
+            alert("Übersetzung: " + translation);
+        });
     });
 </script>
 
